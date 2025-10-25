@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terry portfoilo project</title>
+  <link rel="stylesheet" href="./public/style.css">
+</head>
+
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <h1>Digital Narratives Project</h1>
+    <button id="enter-btn" onclick="enterSite()">Enter</button>
+  </div>
+
+  <div class="map-bg">
+  </div>
+
+  <div class="ping" id="ping" onclick="showPopup()"></div>
+
+  <div class="popup" id="popup">
+    <h2>From Water to Modernity</h2>
+    <p>
+      This stone carving imaginatively blends Canada's natural beauty with its cultural landmarks. In the foreground,
+      two figures with backpacks stand by the water, gazing at the view before them, symbolizing the exploration of
+      Canada's natural beauty.
+    </p>
+    <p>
+      To the right is a detailed view of the Art Gallery of Ontario, showcasing its classical stone structure and modern
+      fiberglass and steel structure. Behind the building, a reddish-brown mountain, illuminated by purple, blue, and
+      green, resembles the northern lights.
+    </p>
+    <img src="./public/image/rock-painting.jpg" alt="Rock Painting">
+    <button class="close-btn" onclick="hidePopup()">Close</button>
+  </div>
+
+  <script>
+    function enterSite() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('ping').style.display = 'block';
+      document.body.style.overflow = 'auto';
+    }
+
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
